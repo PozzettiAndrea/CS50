@@ -1,0 +1,89 @@
+.topnav {
+  background-color: #00008b	;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.Question
+{
+    text-align: center;
+    font-weight: bold;
+    font-size: 150%;
+
+}
+.Subscript
+{
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    font-family: "Times New Roman";
+
+}
+
+.Shrubberies
+{
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+.carousel-multi-item-2 .col-md-3 {
+float: left;
+width: 25%;
+max-width: 100%; } }
+
+.carousel-multi-item-2 .card img {
+border-radius: 2px; }
+
+.Camelot a
+{
+    text-align: center;
+    width: 100%;
+
+}
+
+#R
+{
+background-color:red;
+}
+#B
+{
+background-color:blue;
+}
+#G
+{
+background-color:green;
+}
+#Y
+{
+background-color:yellow;
+}
+#O
+{
+background-color:orange;
+}
+
+header
+{
+    text-align: center;
+}
+subscript
+{
+    text-align: center;
+}
+main
+{
+    text-align: center;
+}

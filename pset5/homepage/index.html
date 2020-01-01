@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<link rel="stylesheet" href="styles.css">
+
+
+
+
+<div class="topnav">
+  <a href="Coconuts.html">Coconuts</a>
+  <a href="index.html">The Bridge of death</a>
+  <a href="Camelot.html">Camelot</a>
+  <a href="Shrubberies.html">A gallery of shrubberies</a>
+</div>
+
+    <head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <title>The Bridge of Death</title>
+    </head>
+
+    <body>
+    <header>
+
+        <img alt="The old man from scene twenty-four" src="http://images.fanpop.com/images/image_uploads/Bridge-of-Death-monty-python-and-the-holy-grail-591681_800_441.jpg">
+
+    </header>
+        <div class = "Subscript">
+            Stop! Who approacheth the Bridge of Death must answer me these questions three, ere the other side he see.
+        </div>
+
+
+    <main>
+        <form>
+        <p>
+        <div class = "Question">
+            What is your name?
+        </div>
+        <input type="text" id="Knightsname"><br>
+
+        </p>
+
+        <p>
+        <div class = "Question">
+            What is your quest?
+        </div>
+          <input type="radio" name="quest" value="1"> To seek the Holy Grail<br>
+          <input type="radio" name="quest" value="0"> I pass butter <br>
+          <input type="radio" name="quest" value="0"> To catch them all <br>
+          <input type="radio" name="quest" value="0"> To grade this cs50 assignment <br>
+        </p>
+
+        <p>
+        <div class = "Question">
+            What is your favourite color?
+<br>
+        <button type='button' id="R">Red</button>
+        <button type='button' id="B">Blue</button>
+        <button type='button' id="G">Green</button>
+        <button type='button' id="Y">Yellow</button>
+        <button type='button' id="O">Orange</button>
+        <script>
+            let body = document.querySelector("body");
+            document.querySelector("#R").onclick = function()
+            {
+            body.style.backgroundColor = "red";
+        }
+            document.querySelector("#B").onclick = function()
+            {
+            body.style.backgroundColor = 'blue';
+        }
+            document.querySelector("#G").onclick = function()
+            {
+            body.style.backgroundColor = 'green';
+        }
+            document.querySelector("#Y").onclick = function()
+            {
+            body.style.backgroundColor = "yellow";
+        }
+            document.querySelector("#O").onclick = function()
+            {
+            body.style.backgroundColor = "orange";
+        }
+        </script>
+
+        <p>
+        <div class = "Question">
+            What is the capital of Assyria?
+        </div>
+          <input type="radio" name="capital" value="1"> I don't know that! <br>
+          <input type="radio" name="capital" value="2"> Ctesiphon <br>
+          <input type="radio" name="capital" value="5"> Rome <br>
+          <input type="radio" name="capital" value="4"> Lemme ask r/Assyria <br>
+
+        <input id="Submit" type="submit" onclick="function()">
+        </form>
+        </p>
+<script>
+document.querySelector("#Submit").onclick = function()
+{
+    let Knightsname = document.querySelector("#Knightsname").value;
+    var quest = document.querySelector('input[name=quest]:checked').value;
+    var capital = document.querySelector('input[name=capital]:checked').value;
+    if (quest == 1 & capital == 2)
+    {
+        alert("Right. Off you go, " + Knightsname);
+    }
+    else
+    {
+        alert(Knightsname + ", you are cast into the Gorge of Eternal Peril ");
+    }
+}
+</script>
+    </main>
+    </body>
+</html>
