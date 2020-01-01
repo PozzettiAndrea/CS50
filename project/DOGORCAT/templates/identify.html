@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Identify
+{% endblock %}
+
+{% block main %}
+    <h1>Submit your picture!</h1>
+    <form action="/identify" method="post" enctype="multipart/form-data">
+        <input type="file" id="selectedFile" name="file" style="display: none;" />
+        <input type="button" value="Browse..." onclick="document.getElementById('selectedFile').click();" />
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="3"></td>
+                <td>{{ total | usd }}</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            {% for i in range(totalitems) %}
+                <tr>
+                    <td>{{ symbols[i] }}</td>
+                    <td>{{ number[i] }}</td>
+                    <td>{{ quotes[i] | usd }}</td>
+                    <td>{{ totstockvalue[i] | usd }}</td>
+                </tr>
+            {% endfor %}
+            <tr>
+                <td>CASH</td>
+                <td colspan="2"></td>
+                <td>{{ balance | usd }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
+

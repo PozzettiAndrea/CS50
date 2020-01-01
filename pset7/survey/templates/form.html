@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+    <h1 class="mb-3">Form</h1>
+
+    <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
+    <form class="needs-validation" name="mainform" action="/form" method="post">
+
+        <div class="form-group">
+            <h5>Name</h5>
+            <div class="row">
+                <div class="col-md-3">
+                    <input type="text" class="form-control" name="first_name" placeholder="First name" required>
+                    <div class="invalid-feedback">
+                        Enter first name
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" name="last_name" placeholder="Last name" required>
+                    <div class="invalid-feedback">
+                        Enter last name
+                    </div>
+                </div>
+            </div>
+            <h5>What language are you most comfortable with?</h5>
+            <div class="row">
+                <div class="col-md-6">
+                    <select class="form-control" name="language" required>
+                        <option disabled selected value>Language</option>
+                        <option value="Common Tongue">Common Tongue</option>
+                        <option value="Low Valyrian">Low Valyrian</option>
+                        <option value="Dothraki">Dothraki</option>
+                        <option value="Asshai">Asshai</option>
+                    </select>
+                    <div class="valid-feedback">
+
+                    </div>
+                    <div class="invalid-feedback">
+                        Please select a language!
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <h5>What best describes your past military experience</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="mexperience" id="inlineRadio1" value="Beginner" required>
+                <label class="form-check-label" for="inlineRadio1">Beginner</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="mexperience" id="inlineRadio2" value="Intermediate" required>
+                <label class="form-check-label" for="inlineRadio1">Intermediate</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="mexperience" id="inlineRadio3" value="Advanced" required>
+                <label class="form-check-label" for="inlineRadio1">Advanced</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="mexperience" id="inlineRadio4" value="Fought in mercenary company" required>
+                <label class="form-check-label" for="inlineRadio1">Fought in mercenary company</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="mexperience" id="inlineRadio5" value="Fighting pits" required>
+                <label class="form-check-label" for="inlineRadio2">Fighting pits</label>
+            </div>
+        </div>
+
+        <!-- http://getbootstrap.com/docs/4.1/components/buttons/ -->
+        <button class="btn btn-primary" type="submit">Submit</button>
+
+    </form>
+
+    <script>
+
+        /* TODO */
+
+    </script>
+
+{% endblock %}

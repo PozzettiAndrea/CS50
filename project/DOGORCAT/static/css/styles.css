@@ -1,0 +1,9 @@
+.meh {
+  background-image: url(/static/img/dog.png);
+  background-repeat: repeat-x;
+}
+
+.navbar.navbar-light.navbar-expand-md {
+  background-color: #000;
+}
+

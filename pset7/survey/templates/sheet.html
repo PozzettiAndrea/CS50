@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block main %}
+
+<h2 class="display-1">Submits</h2>
+
+<table class="table" id="sheet_table">
+        <thead>
+            <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Language</th>
+                <th scope="col">Military Experience</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for soldier in soldiers %}
+                <tr>
+                    <td>{{ soldier[0] }}</td>
+                    <td>{{ soldier[1] }}</td>
+                    <td>{{ soldier[2] }}</td>
+                    <td>{{ soldier[3] }}</td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+
+
+{% endblock %}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- documentation at http://getbootstrap.com/docs/4.1/, alternative themes at https://bootswatch.com/ -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="/static/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/css/styles.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+        <title>DOGORCAT: {% block title %}{% endblock %}</title>
+
+    </head>
+    <body class="meh">
+    <nav class="navbar navbar-light navbar-expand-md">
+        <div class="container-fluid"><a class="navbar-brand" href="#" style="color: #ADD8E6;">Isitacatoradog &nbsp;<img src="static/img/cattordogg.png" style="width: 20%;"></a>
+            {% if session.user_id %}
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item" role="presentation"></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/identify" style="color: #ADD8E6;">Identify</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/history" style="color: #ADD8E6;">History</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/logout" style="color: #ADD8E6;">Logout</a></li>
+                    </ul>
+                {% else %}
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item" role="presentation"></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/login" style="color: #ADD8E6;">Log in</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/register" style="color: #ADD8E6;">Register</a></li>
+                    </ul>
+                {% endif %}
+        </div>
+    </nav>
+    {% if get_flashed_messages() %}
+            <header>
+                <div class="alert alert-primary border text-center" role="alert">
+                    {{ get_flashed_messages() | join(" ") }}
+                </div>
+            </header>
+    {% endif %}
+
+    <div class="jumbotron" style="margin-left: 100px;margin: 100px;border-radius: 50px;background-color: #5B092C;border-style: solid;">
+        <p style="color: #649515;font-weight: 900;font-style: italic;">Hello!<br>Welcome to the first site that allows people with cat/dog blindness to upload their pictures and know whether they are of cats or of dogs!</p>
+        <p style="color: #649515;font-weight: 900;font-style: italic;">The site makes use of an Artificial Intelligence algorithm to determine whether your pet is a cat or a dog (with an 87% accuracy).<br></p>
+        <div class="jumbotron" style="margin-top: 30px;border-radius: 50px;margin-bottom: -45px;">
+            <main class="container p-5">
+            {% block main %}{% endblock %}
+            </main>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

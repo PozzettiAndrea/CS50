@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Image name</th>
+                <th>Cat or dog?</th>
+                <th>Thumbnail</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for his in history %}
+                <tr>
+                    <td>{{ his["time"] }}</td>
+                    <td>{{ his["imagename"] }}</td>
+                    <td>{{ his["pet"] }}</td>
+                    <td><img src={{"static/Images/"+ his["imagename"]}} width="32" height="32"></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
