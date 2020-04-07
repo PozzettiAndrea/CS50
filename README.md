@@ -1,2 +1,2 @@
 # CS50
-Code written for the CS50 course by Andrea Pozzetti. Youtube video of final project in PROJECT folder's readme.
+Code written for the CS50 course by Andrea Pozzetti. Final Project: https://www.youtube.com/watch?v=nz6gDBatjQo
